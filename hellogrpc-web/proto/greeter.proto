@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package hellogrpc;
+
+// 定义问候服务
+service Greeter {
+  // 发送问候
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+  
+  // 发送多次问候
+  rpc SayHelloStreamReply (HelloRequest) returns (stream HelloReply) {}
+}
+
+// 包含用户名的请求消息
+message HelloRequest {
+  string name = 1;
+}
+
+// 包含问候语的响应消息
+message HelloReply {
+  string message = 1;
+}

@@ -1,0 +1,11 @@
+version: '3'
+services:
+  envoy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+      - "9901:9901"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

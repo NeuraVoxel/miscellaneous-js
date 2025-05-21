@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gRPC-Web Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    input, button {
+      padding: 8px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .response {
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      min-height: 100px;
+    }
+    .stream-response {
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    .message {
+      margin: 5px 0;
+      padding: 5px;
+      border-bottom: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+  <h1>gRPC-Web Example</h1>
+  
+  <div class="container">
+    <div class="form-group">
+      <label for="name">Enter your name:</label>
+      <input type="text" id="name" placeholder="Your name">
+    </div>
+    
+    <div class="form-group">
+      <button id="sayHello">Say Hello (Unary)</button>
+      <div class="response" id="unaryResponse">Response will appear here...</div>
+    </div>
+    
+    <div class="form-group">
+      <button id="sayHelloStream">Say Hello (Server Streaming)</button>
+      <div class="response stream-response" id="streamResponse">Stream responses will appear here...</div>
+    </div>
+  </div>
+
+  <script src="bundle.js"></script>
+</body>
+</html>
