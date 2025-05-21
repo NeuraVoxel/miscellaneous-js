@@ -5,7 +5,7 @@ JavaScript相关的各种小项目集合
 
 ```
 .
-├── hellogrpc/          # gRPC示例项目
+├── hellogrpc-node/     # gRPC示例项目
 │   ├── proto/          # Protocol Buffers定义文件
 │   │   └── greeter.proto
 │   ├── src/           # 源代码目录
@@ -44,7 +44,7 @@ JavaScript相关的各种小项目集合
 
 ## 项目列表
 
-1. **hellogrpc** - 一个简单的gRPC示例项目，展示了如何使用Node.js实现gRPC客户端和服务器。
+1. **hellogrpc-node** - 一个简单的gRPC示例项目，展示了如何使用Node.js实现gRPC客户端和服务器。
    - 实现了一元调用和服务器流式调用
    - 使用Protocol Buffers定义服务和消息
    - 详细的代码注释和使用说明
