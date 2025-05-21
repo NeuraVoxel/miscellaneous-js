@@ -60,6 +60,7 @@ wget https://github.com/grpc/grpc-web/releases/download/${GRPC_WEB_PLUGIN_VERSIO
 chmod +x protoc-gen-grpc-web-${GRPC_WEB_PLUGIN_VERSION}-darwin-x86_64
 sudo mv protoc-gen-grpc-web-${GRPC_WEB_PLUGIN_VERSION}-darwin-x86_64 /usr/local/bin/protoc-gen-grpc-web
 ```
+ubuntu 安装gRPC-Web插件请参考dev.md[./dev.md]
 
 3. 生成客户端代码：
 
