@@ -32,14 +32,8 @@ module.exports = {
       directory: path.join(__dirname, 'dist'),
     },
     compress: true,
-    port: 8080,
+    port: 3000,
     hot: true,
     open: true,
-    proxy: {
-      '/helloworld.Greeter': {
-        target: 'http://localhost:9090',
-        changeOrigin: true,
-      },
-    },
   },
 };

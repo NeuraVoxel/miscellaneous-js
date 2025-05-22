@@ -3,8 +3,7 @@
 const { HelloRequest } = require('./proto/greeter_pb.js');
 const { GreeterClient } = require('./proto/greeter_grpc_web_pb.js');
 
-// 创建 gRPC 客户端
-// 在实际部署中，你可能需要使用 Envoy 代理来处理 gRPC-Web 请求
+// 创建 gRPC 客户端，连接到 Envoy 代理
 const client = new GreeterClient('http://localhost:8080');
 
 // 显示消息到响应区域
