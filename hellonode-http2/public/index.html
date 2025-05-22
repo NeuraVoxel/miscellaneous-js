@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP/2 演示</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>HTTP/2 功能演示</h1>
+        
+        <section class="feature-box">
+            <h2>当前页面使用了以下 HTTP/2 特性：</h2>
+            <ul>
+                <li>多路复用 - 并行加载资源而无需多个连接</li>
+                <li>服务器推送 - CSS 和 JS 文件通过推送提前发送</li>
+                <li>头部压缩 - 减少传输数据量</li>
+            </ul>
+        </section>
+
+        <section class="demo-box">
+            <h2>实时请求演示</h2>
+            <button id="makeRequest">发送请求</button>
+            <div id="result" class="result-box">
+                <p>点击上方按钮发送请求...</p>
+            </div>
+        </section>
+
+        <section class="info-box">
+            <h2>关于此演示</h2>
+            <p>这是一个使用 Node.js 实现的 HTTP/2 服务器演示。服务器使用自签名证书，支持以下功能：</p>
+            <ul>
+                <li>安全的 HTTPS 连接</li>
+                <li>静态文件服务</li>
+                <li>服务器推送</li>
+                <li>响应式设计</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
