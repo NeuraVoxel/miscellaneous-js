@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package helloworld;
+
+service Greeter {
+  // 发送问候
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+  
+  // 服务器流式响应示例
+  rpc SayHelloStreamReply (HelloRequest) returns (stream HelloReply) {}
+}
+
+// 请求消息，包含用户名
+message HelloRequest {
+  string name = 1;
+}
+
+// 响应消息，包含问候语
+message HelloReply {
+  string message = 1;
+}

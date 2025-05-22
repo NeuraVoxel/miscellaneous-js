@@ -37,6 +37,20 @@ JavaScript相关的各种小项目集合
 │   ├── webpack.config.js # Webpack配置
 │   ├── package.json   # 项目依赖配置
 │   └── README.md      # 项目说明文档
+├── hellogrpc-web-cpp/  # gRPC-Web与C++后端示例项目
+│   ├── proto/          # Protocol Buffers定义文件
+│   │   └── greeter.proto
+│   ├── client/        # 前端JavaScript代码
+│   │   ├── src/       # 源代码目录
+│   │   │   ├── client.js
+│   │   │   └── index.html
+│   │   ├── package.json
+│   │   └── webpack.config.js
+│   ├── server/        # 后端C++代码
+│   │   ├── src/       # 源代码目录
+│   │   │   └── server.cpp
+│   │   └── CMakeLists.txt
+│   └── README.md      # 项目说明文档
 ├── .gitignore         # Git忽略文件配置
 ├── LICENSE            # 许可证文件
 └── README.md          # 仓库说明文档
@@ -58,6 +72,12 @@ JavaScript相关的各种小项目集合
    - 使用Envoy代理桥接gRPC和HTTP
    - 支持一元调用和服务器流式调用
    - 完整的Web客户端实现
+
+4. **hellogrpc-web-cpp** - gRPC-Web与C++后端示例项目，展示了如何使用JavaScript前端和C++后端实现gRPC通信。
+   - 使用C++实现gRPC服务器
+   - 使用JavaScript和gRPC-Web实现Web客户端
+   - 支持一元调用和服务器流式调用
+   - 包含完整的构建配置（CMake和Webpack）
 
 ## 先决条件
 
