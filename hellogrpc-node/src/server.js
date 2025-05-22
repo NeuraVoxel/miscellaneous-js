@@ -13,6 +13,9 @@ const packageDefinition = protoLoader.loadSync(PROTO_PATH, {
 });
 
 const protoDescriptor = grpc.loadPackageDefinition(packageDefinition);
+
+console.log('protoDescriptor:', protoDescriptor);
+
 const hellogrpc = protoDescriptor.hellogrpc;
 
 // 实现服务方法

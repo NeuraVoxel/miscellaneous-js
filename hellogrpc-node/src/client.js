@@ -13,6 +13,9 @@ const packageDefinition = protoLoader.loadSync(PROTO_PATH, {
 });
 
 const protoDescriptor = grpc.loadPackageDefinition(packageDefinition);
+
+console.log('protoDescriptor:', protoDescriptor);
+
 const hellogrpc = protoDescriptor.hellogrpc;
 
 // 创建客户端
@@ -38,6 +41,7 @@ function main() {
         
         // 调用流式RPC
         console.log('\nCalling SayHelloStreamReply RPC (streaming)...');
+        
         const call = client.sayHelloStreamReply({ name: name });
         
         call.on('data', (response) => {
