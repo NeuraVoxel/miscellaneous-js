@@ -15,6 +15,7 @@ async function main() {
         const root = protobuf.Root.fromJSON(JSON.parse(jsonContent));
 
         console.log('Root:', root);
+        console.log('tutorial:', tutorial);
         
         // 创建一个用户实例
         const payload: tutorial.IUser = {
