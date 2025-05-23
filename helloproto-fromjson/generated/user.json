@@ -1,0 +1,48 @@
+{
+  "options": {
+    "syntax": "proto3"
+  },
+  "nested": {
+    "tutorial": {
+      "nested": {
+        "Role": {
+          "values": {
+            "UNKNOWN": 0,
+            "ADMIN": 1,
+            "USER": 2,
+            "GUEST": 3
+          }
+        },
+        "User": {
+          "fields": {
+            "id": {
+              "type": "string",
+              "id": 1
+            },
+            "name": {
+              "type": "string",
+              "id": 2
+            },
+            "age": {
+              "type": "int32",
+              "id": 3
+            },
+            "email": {
+              "type": "string",
+              "id": 4
+            },
+            "role": {
+              "type": "Role",
+              "id": 5
+            },
+            "hobbies": {
+              "rule": "repeated",
+              "type": "string",
+              "id": 6
+            }
+          }
+        }
+      }
+    }
+  }
+}
