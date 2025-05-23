@@ -1,0 +1,19 @@
+{
+  "options": {
+    "syntax": "proto3"
+  },
+  "nested": {
+    "awesomepackage": {
+      "nested": {
+        "AwesomeMessage": {
+          "fields": {
+            "awesomeField": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

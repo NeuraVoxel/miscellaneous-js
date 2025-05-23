@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build:proto": "npx pbjs -t static-module -o generated/user.js proto/user.proto && npx pbjs -t json -o generated/user.json proto/user.proto && npx pbts -o generated/user.d.ts generated/user.js",
+    "build:proto2": "npx pbjs -t static-module -o generated/awesome.js proto/awesome.proto && npx pbjs -t json -o generated/awesome.json proto/awesome.proto && npx pbts -o generated/awesome.d.ts generated/awesome.js",
     "start": "ts-node src/index.ts",
     "build:ts": "tsc",
     "build": "npm run build:proto && npm run build:ts",
