@@ -59,7 +59,6 @@ async function main() {
     }
 }
 
-main().catch(console.error);
 
 function testawesomeproto() {
     console.log('testawesomeproto');
@@ -129,5 +128,7 @@ function testawesomeprotoJson() {
     console.log(`decoded = ${JSON.stringify(decoded)}`);
 
 }
+
+main().catch(console.error);
 testawesomeproto();
 testawesomeprotoJson();
