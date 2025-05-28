@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import { user, message } from './generated/proto/bundle';
+import { user, message } from './generated/src/proto/bundle';
+import {message as message2} from './generated/src/proto/message';
 
 function App() {
   const [userData, setUserData] = useState({
@@ -18,6 +19,8 @@ function App() {
     isActive: false
   });
 
+  console.log(message2);
+  
   const handleUserSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Create a new User message

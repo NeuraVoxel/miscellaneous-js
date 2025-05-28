@@ -1,46 +1,60 @@
-# Getting Started with Create React App
+# Protocol Buffers with TypeScript and React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+这个项目演示了如何在React TypeScript应用中使用Protocol Buffers。
 
-## Available Scripts
+## 项目结构
 
-In the project directory, you can run:
+- `src/proto/`: 包含Protocol Buffers定义文件
+  - `user.proto`: 用户相关的消息和枚举定义
+  - `message.proto`: 示例消息定义
+- `src/generated/proto/`: 包含由Protocol Buffers生成的TypeScript文件
+  - `bundle.js`: 生成的JavaScript代码
+  - `bundle.d.ts`: 生成的TypeScript类型定义
 
-### `npm start`
+## 安装依赖
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+npm install
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 生成Protocol Buffers TypeScript文件
 
-### `npm test`
+```bash
+npm run generate-proto
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+这个命令会从`src/proto/`目录中的`.proto`文件生成TypeScript代码。
 
-### `npm run build`
+## 启动开发服务器
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 使用方法
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+这个演示应用包含两个表单：
 
-### `npm run eject`
+1. **用户表单**：演示如何使用Protocol Buffers来编码和解码用户数据
+   - 填写表单字段
+   - 点击"Encode & Decode User"按钮
+   - 查看浏览器控制台以查看编码和解码的结果
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. **消息表单**：演示如何使用Protocol Buffers来编码和解码简单消息
+   - 填写表单字段
+   - 点击"Encode & Decode Message"按钮
+   - 查看浏览器控制台以查看编码和解码的结果
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Protocol Buffers的优势
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **高效的序列化**：比JSON和XML更小的数据大小
+- **类型安全**：强类型定义
+- **向前和向后兼容**：可以添加新字段而不破坏现有代码
+- **多语言支持**：可以在不同编程语言之间共享相同的数据结构
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+protoc --cpp_out=./src/generated/ ./src/proto/message.proto
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+protoc --plugin="protoc-gen-ts=./node_modules/.bin/protoc-gen-ts"  --ts_out=./src/generated/ ./src/proto/message.proto
+```
