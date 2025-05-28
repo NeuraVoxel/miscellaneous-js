@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package message;
+
+message AwesomeMessage {
+  string awesome_field = 1;
+  int32 count = 2;
+  bool is_active = 3;
+}

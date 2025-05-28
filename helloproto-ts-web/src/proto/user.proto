@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package user;
+
+enum Role {
+  USER = 0;
+  ADMIN = 1;
+  GUEST = 2;
+}
+
+message User {
+  string id = 1;
+  string name = 2;
+  int32 age = 3;
+  string email = 4;
+  Role role = 5;
+  repeated string hobbies = 6;
+}
