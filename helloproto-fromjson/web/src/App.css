@@ -1,0 +1,162 @@
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.app-header h1 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.app-header p {
+  color: #666;
+  margin: 10px 0 0;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  border: none;
+  background: #e9ecef;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.tabs button.active {
+  background: #007bff;
+  color: white;
+}
+
+.content-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.input-section, .output-section {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #495057;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.hobby-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.hobby-input input {
+  flex-grow: 1;
+}
+
+.hobby-input button {
+  padding: 8px 12px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-button {
+  padding: 8px 16px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.output-group {
+  margin-bottom: 20px;
+}
+
+.output-group h3 {
+  color: #495057;
+  margin-bottom: 10px;
+}
+
+.binary-output {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+  font-family: monospace;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+pre {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 0;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.process-button {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.process-button:hover {
+  background: #0056b3;
+}
+
+@media (min-width: 768px) {
+  .user-container,
+  .awesome-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
